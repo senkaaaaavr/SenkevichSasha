@@ -16,10 +16,10 @@
 <input type="Строка поиска" name="name"> 
 <input type="submit" value="Искать">
 <p><label>
-    <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked> 1
+    <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked> на сайте
     </label>
     <label>
-        <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0"> 2
+        <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0"> в google
         </label></p>         
 <h1 style="font-size:medium;"><em>Длина запроса не более 10 символов</em></h1>
 </form>
@@ -29,12 +29,18 @@
     <legend>Строка поиска</legend>
 <form 
  action="http://fe.it-academy.by/TestForm.php" method="post">
-<input type="Строка поиска" name="name"> 
+<input type="Строка поиска" name="name">*
 <input type="submit" value="Искать">
-<h1>text</h1>
+<p><label>
+    <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked> на сайте
+    </label>
+    <label>
+        <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0"> в google
+        </label></p>    
+        <h1 style="font-size:medium;"><em>*-обязательное поле</em></h1>     
+<h1 style="font-size:medium;"><em>Автофокус в поле поиска</em></h1>
 </form>
 </fieldset></td>
-</tr>
 
 
     <tr>
@@ -42,9 +48,13 @@
             <legend>Авторизируйтесь</legend>
         <form 
          action="http://fe.it-academy.by/TestForm.php" method="post">
-        <input type="Строка поиска" name="name"> 
-        <input type="submit" value="Искать">
-        <h1>text</h1>
+         <input type="text" name="Username">
+         <button type="submit">Password</button> 
+         <br><br>
+         <input type="password" name="Password">
+         <button type="submit">Login</button> 
+         <br><br>    
+         <input type="submit" value="Войти">
         </form>
         </fieldset></td>
         
@@ -52,26 +62,51 @@
             <legend>Как вам?</legend>
         <form 
          action="http://fe.it-academy.by/TestForm.php" method="post">
-        <input type="Строка поиска" name="name"> 
-        <input type="submit" value="Искать">
-        <h1>text</h1>
+         <p><label>
+            <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked> ничего
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0"> неплохо
+                </label>
+                <br>   
+                <label>
+                    <input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked> хорошо
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0"> супер
+                        </label></p>  
+                        <input type="submit" value="Отправить">  
+                        <h1 style="font-size:medium;"><em>Есть скрытое поле 
+                            name=date_voite, value="2013.12.31"</em></h1>
         </form>
         </fieldset></td>
-        </tr>
+        
 
         <tr>
             <td><fieldset>
                 <legend>Оставьте ваш отзыв</legend>
             <form 
              action="http://fe.it-academy.by/TestForm.php" method="post">
-            <input type="Строка поиска" name="name"> 
-            <input type="submit" value="Искать">
-            <h1>text</h1>
-            </form>
+
+             <INPUT TYPE="email" NAME="email" SIZE="20">
+             <LABEL FOR="email"> *email</LABEL>
+             <br><br>
+             <INPUT TYPE="name"  NAME="name" SIZE="20">
+             <LABEL FOR="name"> *имя</LABEL>
+             <br><br>
+             <input type="text" id="dataField" name="dataField" placeholder="Форма отправки">
+             </form>     
             </fieldset></td>
+            </tr>
+
+    <br>
+                <td><fieldset>
+                    <legend>Города РБ</legend>
+            <form action="http://fe.it-academy.by/TestForm.php" method="post">
             
-            <fieldset>
-                <legend>Города РБ</legend>
+            
                 <select name="list" id="list">
                     <optgroup label="Города РБ">
                           <option value="1">Брест</option>
@@ -84,11 +119,12 @@
                           <option value="6">Магадан</option>
                     </optgroup>
                     </select>
-                    <input type="submit" value="ОК">
-                       
-            </fieldset>
-            </tr>
-
+                    <input type="submit" value="ОК">            
+            
+        </form>
+    </fieldset>
+        </td>
+    
 
             <tr>
                 <td><fieldset>
